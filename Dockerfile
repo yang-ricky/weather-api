@@ -13,7 +13,9 @@ RUN dotnet publish -c Release -o out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
+
 EXPOSE 80
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "weather-api.dll"]
+CMD ["/bin/bash", "-c", "dotnet weather-api.dll"]
+#ENTRYPOINT ["dotnet", "weather-api.dll"]
