@@ -1,0 +1,25 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0
+
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+            unzip \
+    && rm -rf /var/lib/apt/lists/* \
+    && curl -sSL https://aka.ms/getvsdbgsh \
+        | bash /dev/stdin -v latest -l ~/vsdbg
+
+WORKDIR /app
+COPY ./ ./
+# COPY ./test.API/ ./test.API/
+
+ENV DOTNET_USE_POLLING_FILE_WATCHER 1
+ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
+
+#WORKDIR /app/test.API
+
+# ENTRYPOINT dotnet watch run --urls=http://*:5000
+ENTRYPOINT dotnet run --urls=http://*:8080
+
+#CMD ["dotnet weather-api.dll"]
+
+# ----------------------------------------------------------

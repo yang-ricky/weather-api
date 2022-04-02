@@ -1,0 +1,17 @@
+version: "3"
+services:
+    # Api Setup
+    api:
+      container_name: weather
+      build:
+        context: ./
+        dockerfile: ./DockerfileDebug
+      volumes:
+        - ./:/app/
+      environment:
+        - DOTNET_USE_POLLING_FILE_WATCHER=1
+        - DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX=2
+        - DOTNET_CLI_TELEMETRY_OPTOUT=1
+      ports:
+          - "8080:8080"
+      restart: always
