@@ -5,9 +5,12 @@
 # docker run -it -p 8080:80 weather:0.0.1
 
 # How to to remote debug?
-  * docker-compose -f compose.yaml up
+  * sh ./clear.sh
+  * docker run -it -p 8080:8080 -p 2345:2345 --name weather  weather:0.0.1 /bin/bash
+  * input dotnet run --urls=http://*:8080 in command line
   * Click debug icon and select "RemoteDebug"
   * and then select Process
+  * input http://localhost:8080/health
   * result can be seen in debug.jpg
 
 # refinement

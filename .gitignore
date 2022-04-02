@@ -2,3 +2,4 @@
 .vs/weather*
 bin/
 obj/Debug/
+obj/**

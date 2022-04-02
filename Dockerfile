@@ -30,4 +30,4 @@ COPY --from=build-env /app/out .
 
 CMD ["/bin/bash", "-c", "dotnet weather-api.dll"]
 #ENTRYPOINT ["dotnet", "weather-api.dll"]
-#ENTRYPOINT dotnet run --urls=http://*:5000
+#ENTRYPOINT dotnet run --urls=http://*:8080
