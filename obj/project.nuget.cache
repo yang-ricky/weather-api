@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "wsaVbwyT+iLYwxvyNUgwAzWXr0g8c79fhNG+773hCi412oYVOisb8yyV2ikUCvteS0WIglFKpM+HnIcVHq5iaQ==",
+  "dgSpecHash": "TqRsBDMzXkEPCHHf7oHGAT46qXUTnKF4icbuUDKtTqPBCEtJ5YrDt+jU9GULB6gqqvf7RnahUV4gHEFm8xuoIA==",
   "success": true,
   "projectFilePath": "/Users/yang/Code/study/weather-api/weather-api.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/yang/.nuget/packages/flurl/3.0.4/flurl.3.0.4.nupkg.sha512",
+    "/Users/yang/.nuget/packages/flurl.http/3.2.2/flurl.http.3.2.2.nupkg.sha512",
+    "/Users/yang/.nuget/packages/microsoft.netcore.platforms/2.1.2/microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "/Users/yang/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/Users/yang/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "/Users/yang/.nuget/packages/system.text.encoding.codepages/4.5.1/system.text.encoding.codepages.4.5.1.nupkg.sha512"
+  ],
   "logs": []
 }

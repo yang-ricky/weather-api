@@ -1,7 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net;
+using System.Net.Http;
+using Flurl;
+using Flurl.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -41,6 +42,16 @@ namespace weather_api
                     string json = "{\"status\":\"200\"}";
                     Console.WriteLine("health check from weather api");
                     await context.Response.WriteAsync(json);
+                });
+
+                endpoints.MapGet("/latest", async context =>
+                {
+
+                    string url = "https://restapi.amap.com/v3/weather/weatherInfo?city=310112&key=951e2df1b1d11de910eacd470e7f41ef";
+                    var response = await url
+                                 .GetStringAsync();
+                    context.Response.ContentType = "application/json; charset=utf-8";
+                    await context.Response.WriteAsync(response);
                 });
             });
         }

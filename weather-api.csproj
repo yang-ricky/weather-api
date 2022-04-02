@@ -5,4 +5,12 @@
     <RootNamespace>weather_api</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Flurl" />
+    <None Remove="Flurl.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Flurl" Version="3.0.4" />
+    <PackageReference Include="Flurl.Http" Version="3.2.2" />
+  </ItemGroup>
 </Project>
