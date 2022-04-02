@@ -9,3 +9,7 @@
   * Click debug icon and select "RemoteDebug"
   * and then select Process
   * result can be seen in debug.jpg
+
+# refinement
+  * 如何优化image体积?
+  * debug版本和非debug版本如何统一起来?
